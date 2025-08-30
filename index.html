@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div id="question-section">
+    <h1>What's your dream?</h1>
+    <button onclick="startCountdown()">Future/Contractor</button>
+    <button onclick="startCountdown()">Illegal Businessman</button>
+    <button onclick="startCountdown()">Illegal Dealer</button>
+  </div>
+
+  <div id="countdown-section" class="hidden">
+    <p id="countdown-text"></p>
+  </div>
+
+  <div id="final-message" class="hidden">
+    <img src="assets/photos/friend.jpg" alt="Friend Photo" id="friend-photo">
+    <p>Happy Birthday, our future il/legal business owner 🥺🥺</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
