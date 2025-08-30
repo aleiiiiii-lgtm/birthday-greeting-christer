@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Surprise 🎉</title>
+  <title>Birthday Surprise</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="container">
+    <div id="question-screen">
+      <h2>What’s his dream?</h2>
+      <button onclick="chooseDream('Future Contractor')">Future Contractor</button>
+      <button onclick="chooseDream('Illegal Businessman')">Illegal Businessman</button>
+      <button onclick="chooseDream('Illegal Dealer')">Illegal Dealer</button>
+    </div>
 
-  <div id="question-section">
-    <h1>What's your dream?</h1>
-    <button onclick="startCountdown()">Future/Contractor</button>
-    <button onclick="startCountdown()">Illegal Businessman</button>
-    <button onclick="startCountdown()">Illegal Dealer</button>
-  </div>
+    <div id="dark-meme-screen" class="hidden">
+      <h2>😈 Dark times... 😈</h2>
+      <p>Loading some cursed vibes...</p>
+    </div>
 
-  <div id="countdown-section" class="hidden">
-    <p id="countdown-text"></p>
-  </div>
+    <div id="light-meme-screen" class="hidden">
+      <h2>😺✨ Let’s brighten things up! ✨😺</h2>
+      <p>[Imagine cat memes and dancing gifs here 😂]</p>
+    </div>
 
-  <div id="final-message" class="hidden">
-    <img src="assets/photos/friend.jpg" alt="Friend Photo" id="friend-photo">
-    <p>Happy Birthday, our future il/legal business owner 🥺🥺</p>
+    <div id="countdown-screen" class="hidden">
+      <h2>⏳ Countdown: <span id="count">10</span></h2>
+    </div>
+
+    <div id="final-screen" class="hidden">
+      <h2>🎉 Happy Birthday 🎉</h2>
+      <img src="IMG_20250609_181050_434.jpg" alt="Friend Photo" class="friend-photo">
+      <p>Happy Birthday, our future il/legal business owner 🥺🥺</p>
+    </div>
   </div>
 
   <script src="script.js"></script>
