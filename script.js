@@ -1,18 +1,33 @@
-function startCountdown() {
-  document.getElementById('question-section').classList.add('hidden');
-  document.getElementById('countdown-section').classList.remove('hidden');
+function chooseDream(choice) {
+  document.getElementById("question-screen").classList.add("hidden");
+  document.getElementById("dark-meme-screen").classList.remove("hidden");
 
-  let countdown = 10; // 10-second countdown
-  const countdownText = document.getElementById('countdown-text');
-  countdownText.textContent = `Get ready... ${countdown}`;
+  // Show dark meme for 2 seconds, then light meme
+  setTimeout(() => {
+    document.getElementById("dark-meme-screen").classList.add("hidden");
+    document.getElementById("light-meme-screen").classList.remove("hidden");
+  }, 2000);
+
+  // Show light meme for 3 seconds, then countdown
+  setTimeout(() => {
+    document.getElementById("light-meme-screen").classList.add("hidden");
+    document.getElementById("countdown-screen").classList.remove("hidden");
+    startCountdown();
+  }, 5000);
+}
+
+function startCountdown() {
+  let count = 10;
+  const counter = document.getElementById("count");
 
   const interval = setInterval(() => {
-    countdown--;
-    countdownText.textContent = `Get ready... ${countdown}`;
-    if (countdown < 0) {
+    count--;
+    counter.textContent = count;
+
+    if (count <= 0) {
       clearInterval(interval);
-      document.getElementById('countdown-section').classList.add('hidden');
-      document.getElementById('final-message').classList.remove('hidden');
+      document.getElementById("countdown-screen").classList.add("hidden");
+      document.getElementById("final-screen").classList.remove("hidden");
     }
   }, 1000);
 }
